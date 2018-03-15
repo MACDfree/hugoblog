@@ -15,5 +15,7 @@ deploy:
 cache:
   directories:
     - $GOPATH/src
+before_cache:
+  - rm -rf $GOPATH/src/github.com/MACDfree/hugoblog
 install: go get -v github.com/gohugoio/hugo
 script: hugo
