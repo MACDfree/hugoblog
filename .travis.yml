@@ -12,5 +12,8 @@ deploy:
   target_branch: master
   on:
     branch: master
+cache:
+  directories:
+    - $GOPATH/src
 install: go get -v github.com/gohugoio/hugo
 script: hugo
