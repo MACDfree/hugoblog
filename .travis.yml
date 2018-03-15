@@ -1,0 +1,16 @@
+language: go
+sudo: false
+git:
+  depth: 1
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local_dir: public
+  repo: MACDfree/macdfree.github.io
+  target_branch: master
+  on:
+    branch: master
+install: go get -v github.com/gohugoio/hugo
+script: hugo
