@@ -14,8 +14,39 @@ deploy:
     branch: master
 cache:
   directories:
-    - $GOPATH/src
-before_cache:
-  - rm -rf $GOPATH/src/github.com/MACDfree/hugoblog
+    - $GOPATH/src/github.com/gohugoio
+    - $GOPATH/src/github.com/alecthomas
+    - $GOPATH/src/github.com/dlclark
+    - $GOPATH/src/github.com/fsnotify
+    - $GOPATH/src/golang.org
+    - $GOPATH/src/github.com/spf13
+    - $GOPATH/src/github.com/PuerkitoBio
+    - $GOPATH/src/github.com/danwakefield
+    - $GOPATH/src/github.com/chaseadamsio
+    - $GOPATH/src/github.com/russross
+    - $GOPATH/src/github.com/shurcooL
+    - $GOPATH/src/github.com/jdkato
+    - $GOPATH/src/github.com/kyokomi
+    - $GOPATH/src/github.com/miekg
+    - $GOPATH/src/github.com/BurntSushi
+    - $GOPATH/src/github.com/mitchellh
+    - $GOPATH/src/github.com/olekukonko
+    - $GOPATH/src/github.com/mattn
+    - $GOPATH/src/github.com/bep
+    - $GOPATH/src/github.com/nicksnyder
+    - $GOPATH/src/github.com/pelletier
+    - $GOPATH/src/github.com/gobwas
+    - $GOPATH/src/github.com/muesli
+    - $GOPATH/src/github.com/eknkc
+    - $GOPATH/src/github.com/hashicorp
+    - $GOPATH/src/github.com/magiconair
+    - $GOPATH/src/github.com/markbates
+    - $GOPATH/src/github.com/gobuffalo
+    - $GOPATH/src/github.com/joho
+    - $GOPATH/src/github.com/gorilla
+    - $GOPATH/src/github.com/cpuguy83
+    - $GOPATH/src/gopkg.in/yaml.v2
+    - $GOPATH/src/github.com/disintegration
+    - $GOPATH/src/github.com/yosssi
 install: go get -v github.com/gohugoio/hugo
 script: hugo
