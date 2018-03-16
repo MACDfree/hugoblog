@@ -51,6 +51,6 @@ cache:
 install: go get -v github.com/gohugoio/hugo
 script: hugo
 notifications:
-  slack:
+  email:
     on_failure: always
     on_success: never
