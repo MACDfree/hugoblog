@@ -50,3 +50,7 @@ cache:
     - $GOPATH/src/github.com/yosssi
 install: go get -v github.com/gohugoio/hugo
 script: hugo
+notifications:
+  slack:
+    on_failure: always
+    on_success: never
