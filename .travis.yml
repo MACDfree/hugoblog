@@ -45,7 +45,7 @@ cache:
     - $GOPATH/src/github.com/joho
     - $GOPATH/src/github.com/gorilla
     - $GOPATH/src/github.com/cpuguy83
-    - $GOPATH/src/gopkg.in/yaml.v2
+    - $GOPATH/src/gopkg.in/v2/yaml
     - $GOPATH/src/github.com/disintegration
     - $GOPATH/src/github.com/yosssi
 install: go get -v github.com/gohugoio/hugo
