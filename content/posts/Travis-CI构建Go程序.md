@@ -24,7 +24,7 @@ mathjaxEnableSingleDollar: false
 
 <!--more-->
 
-install 安装依赖的脚本
+install 安装依赖的脚本ceshi 
 如果有多个脚本，只要有脚本错误就立即停止构建
 script 运行脚本
 如果有多个脚本，即使有错误，也会运行下去，但最后结果显示失败
