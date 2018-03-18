@@ -52,7 +52,7 @@ install:
   # - go get -v github.com/gohugoio/hugo
   - wget https://github.com/gohugoio/hugo/releases/download/v0.37.1/hugo_0.37.1_Linux-64bit.tar.gz
   - tar -xvzf hugo_0.37.1_Linux-64bit.tar.gz
-  - ls
+  - cp hugo $HOME/gopath/bin/
 script: hugo
 notifications:
   email:
