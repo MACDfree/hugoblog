@@ -1,5 +1,5 @@
 ---
-title: "Travis CI构建Go程序"
+title: "Travis CI使用记录"
 date: 2018-03-15T21:40:29+08:00
 lastmod: 2018-03-15T21:40:29+08:00
 draft: true
