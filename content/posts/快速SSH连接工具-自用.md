@@ -1,7 +1,7 @@
 ---
 title: "快速SSH连接工具（自用）"
 date: 2018-03-08T22:15:08+08:00
-lastmod: 2018-03-18T18:28:08+08:00
+lastmod: 2018-03-19T18:28:08+08:00
 draft: false
 keywords: ["ssh", "go", "ssh连接管理工具"]
 description: "用go编写的快速SSH连接工具"
@@ -34,9 +34,9 @@ mathjaxEnableSingleDollar: false
 
 # 折腾
 
-## 准备
+## 准备
 
-几番对比之后，本人选择了在Windows中安装Ubuntu子系统，配合open-wsl终端工具满足ssh连接的需求。但问题还是没有解决，所以动手写了个可以管理ssh session的小工具，供自己使用。
+几番对比之后，本人选择了在Windows中安装Ubuntu子系统，配合open-wsl终端工具满足ssh连接的需求。但问题还是没有解决，所以动手写了个可以管理ssh session的小工具，供自己使用。
 
 ## 前期规划
 
@@ -65,6 +65,6 @@ alias1:
 
 ## 代码实现
 
-需要实现的功能主要包括：解析yaml文件管理（增删查）ssh session、ssh连接远程主机。其中解析yaml使用`gopkg.in/yaml.v2`实现，ssh连接使用`golang.org/x/crypto/ssh`实现。另外，由于go标准库中的flags包不支持sub commend，所以使用了`gopkg.in/urfave/cli.v1`实现命令解析功能。
+需要实现的功能主要包括：解析yaml文件管理（增删查）ssh session、ssh连接远程主机。其中解析yaml使用`gopkg.in/yaml.v2`实现，ssh连接使用`golang.org/x/crypto/ssh`实现。另外，由于go标准库中的flags包不支持sub commend，所以使用了`gopkg.in/urfave/cli.v1`实现命令解析功能。
 
-最后，附上源码地址[sshs-ssh连接管理工具](https://github.com/MACDfree/sshs)
+最后，附上源码地址[sshs-ssh连接管理工具](https://github.com/MACDfree/sshs)
