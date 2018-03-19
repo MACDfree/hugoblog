@@ -2,7 +2,7 @@
 title: "Travis CI使用记录"
 date: 2018-03-15T21:40:29+08:00
 lastmod: 2018-03-15T21:40:29+08:00
-draft: true
+draft: false
 keywords: ["Travis CI"]
 description: "Travis CI使用记录"
 tags: ["Travis CI"]
@@ -61,10 +61,26 @@ notifications:
     on_success: never
 ```
 
-以上是一个使用Go语言的配置，`language` 配置需要构建的语言环境；`go` 配置使用的go语言版本；`deploy` 配置构建好后文件发布的参数，在此不深入展开，具体可参考官方文档；`install` 配置项目依赖需要执行的指令，可配置多条指令；`script` 配置构建指令，同样可以配置多条指令；`notifications` 配置通知方式，具体配置可参考官方文档。
+以上是一个使用Go语言的配置，`language` 配置需要构建的语言环境；`go` 配置使用的go语言版本；`deploy` 配置构建好后文件发布的参数，在此不深入展开，具体可参考[官方文档](https://docs.travis-ci.com/user/deployment/releases/)；`install` 配置项目依赖需要执行的指令，可配置多条指令；`script` 配置构建指令，同样可以配置多条指令；`notifications` 配置通知方式，具体配置可参考[官方文档](https://docs.travis-ci.com/user/notifications)。
 
 对于 `.travis.yml` 文件，**Travis** 的执行顺序为：`before_install` -> `install` -> `before_script` -> `script` -> `deploy`。
 
 # 项目的构建流程
 
+下图是使用Travis CI构建Go项目的输出日志
+
 ![travislog](http://ocd8m6zlz.bkt.clouddn.com/travislog.png)
+
+由图可知，构建任务可分为：
+
+1. 拉取github仓库代码
+2. 设置相关环境变量
+3. 将代码同步至指定的目录下（此处应该和具体语言环境相关）
+4. 切换至代码所在目录
+5. 执行`install`中的相关指令（如果之前配置了`before_install`，则先执行`before_install`中的指令）
+6. 执行`script`中的指令（如果之前配置了`before_script`，则先执行`before_script`中的指令）
+7. 最后执行发布操作
+
+如此梳理过构建流程后，可以发现：**Travis CI**只是提供里构建所需的系统环境和框架，并且开放不同阶段的钩子，具体构建操作可由用户通过`.travis.yml`自定义配置，提高了可玩性，但同时也对使用者的bash脚步编写能力有了一定的要求。
+
+最后说一些题外话，之前本人的博客使用GitHub Pages + hugo 搭建。同时原始md文件存放在另一个仓库中，为了实现只要提高md文件，立马自动生成静态页面并发布至GitHub的需求，特地使用Go编写了一个BlogCI的服务程序，大体思路是：当有md文件提交时，使用webhooks发送http请求至BlogCI，BlogCI接收到请求后在本地拉取最新的md文件，调用hugo命令生成静态页面，最后发布至GitHub Pages。上述流程看着是不是很眼熟？这不就是Travis CI做的事情吗。所以，现在可以摒弃之前丑陋的实现，直接使用Travis CI实现博客的自动构建了。详细教程可参考[官方文档](https://docs.travis-ci.com/user/deployment/pages/)。
