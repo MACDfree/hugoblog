@@ -13,8 +13,8 @@ tags: ["vscode"]
 
 2. 配置环境变量，PATH中添加go/bin路径，新增GOROOT环境变量，值为go目录
 
-3. 安装VSCode，安装Go插件（推荐安装Settings Sync插件，可以实现多平台插件和配置文件的同步）
+3. 安装VSCode，安装Go插件
 
-4. 新建gotool文件夹存放Go插件依赖的工具，使用VSCode打开此文件夹，新增工作区配置：`go.toolsGopath`和`go.gopath`
+4. 新建gotool文件夹存放Go插件依赖的工具，使用VSCode打开此文件夹，新增工作区配置：`go.toolsGopath`和`go.gopath`（`go.gopath`可以统一配置为：`${workspaceRoot};C:\\path\\golib`）
 
 5. 执行安装Go工具命令

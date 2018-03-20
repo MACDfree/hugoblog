@@ -1,10 +1,10 @@
 ---
 title: "Go命令记录"
 date: 2017-11-07T22:18:08+08:00
-lastmod: 2018-03-08T10:52:57+08:00
+lastmod: 2018-03-20T10:52:57+08:00
 draft: false
 categories: ["Go"]
-tags: ["交叉编译"]
+tags: []
 ---
 
 `Go`相关命令记录
@@ -33,11 +33,17 @@ $env:GOARCH="amd64"
 go install ...
 ```
 
-# go install
-
-编译目录下所有包
+# 编译目录下所有包
 
 ``` sh
 go install ...
 go install /tmp/...
 ```
+
+# 安装依赖
+
+``` sh
+go get -t ./...
+```
+
+其中`-t`参数表示下载安装测试代码中的依赖
