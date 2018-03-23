@@ -2,7 +2,7 @@
 title: "Axis调用CXF发布的WebService遇到的问题"
 date: 2018-03-22T12:40:50+08:00
 lastmod: 2018-03-23T12:40:50+08:00
-draft: true
+draft: false
 keywords: ["axis", "cxf", "string[]", "WebService"]
 description: "Axis调用CXF发布的WebService遇到的问题"
 tags: ["axis", "cxf", "string[]"]
