@@ -105,6 +105,19 @@ public class ArrayOfString {
 }
 ```
 
+最终WebService代码修改如下：
+
+``` java
+@WebMethod(action = "http://tempuri.org/getAllPurchasePlane")
+    public @WebResult(targetNamespace = "http://tempuri.org/") ArrayOfString getAllPurchasePlane(
+            @WebParam(name = "xmlParameter", targetNamespace = "http://tempuri.org/") String xmlParameter) {
+        ArrayOfString ret = new ArrayOfString();
+        ret.getString().add("-1");
+        ret.getString().add("xml格式不正确");
+        return ret;
+    }
+```
+
 修改代码后，本地测试通过，再和客户联调也验证通过，问题至此解决。
 
 但疑问还没有消除，根据`ArrayofString`的源码，其实也只是封装了一个`List<String>`，为什么使用**Axis**调用后的返回值可以转换成`String[]`？希望了解的人告知一二。
