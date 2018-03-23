@@ -109,13 +109,13 @@ public class ArrayOfString {
 
 ``` java
 @WebMethod(action = "http://tempuri.org/getAllPurchasePlane")
-    public @WebResult(targetNamespace = "http://tempuri.org/") ArrayOfString getAllPurchasePlane(
-            @WebParam(name = "xmlParameter", targetNamespace = "http://tempuri.org/") String xmlParameter) {
-        ArrayOfString ret = new ArrayOfString();
-        ret.getString().add("-1");
-        ret.getString().add("xml格式不正确");
-        return ret;
-    }
+public @WebResult(targetNamespace = "http://tempuri.org/") ArrayOfString getAllPurchasePlane(
+        @WebParam(name = "xmlParameter", targetNamespace = "http://tempuri.org/") String xmlParameter) {
+    ArrayOfString ret = new ArrayOfString();
+    ret.getString().add("-1");
+    ret.getString().add("xml格式不正确");
+    return ret;
+}
 ```
 
 修改代码后，本地测试通过，再和客户联调也验证通过，问题至此解决。
