@@ -5,7 +5,7 @@ lastmod: 2018-03-23T12:40:50+08:00
 draft: false
 keywords: ["axis", "cxf", "string[]", "WebService"]
 description: "Axis调用CXF发布的WebService遇到的问题"
-tags: ["axis", "cxf", "string[]"]
+tags: ["axis", "cxf"]
 categories: ["java"]
 author: ""
 
