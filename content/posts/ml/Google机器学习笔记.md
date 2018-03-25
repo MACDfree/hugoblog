@@ -1,0 +1,41 @@
+---
+title: "Google机器学习笔记"
+date: 2018-03-25T21:41:51+08:00
+lastmod: 2018-03-25T21:41:51+08:00
+draft: false
+keywords: ["机器学习"]
+description: "Google机器学习笔记"
+tags: []
+categories: ["machine-learning"]
+author: ""
+
+# You can also close(false) or open(true) something for this content.
+# P.S. comment can only be closed
+comment: false
+toc: true
+autoCollapseToc: false
+postMetaInFooter: true
+# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
+contentCopyright: ""
+reward: true
+mathjax: true
+mathjaxEnableSingleDollar: true
+---
+
+最近正在抽空学习Google的[《机器学习速成课程》](https://developers.google.com/machine-learning/crash-course)。由于拖延症晚期加上工作忙碌，学习进度缓慢，经常遇到这次看的内容下次就忘了的情况，所以在此记录一下，以加强记忆，巩固所学知识。
+<!--more-->
+
+监督式机器学习定义：机器学习系统通过学习如何组合输入信息来对从未见过的数据做出有用的预测。
+
+标签：我们要预测的事物，如小麦未来的价格、图片中显示的动物的品种等，在简单线性回归（$y=b+{ \omega  }_{ 1 }{ x }_{ 1 }+{ \omega  }_{ 2 }{ x }_{ 2 }$）中的`y`
+
+特征：输入变量，在垃圾邮件检测器示例中，特征可能包含：
+
+- 电子邮件文本中的字词
+- 发件人的地址
+- 发送电子邮件的时段
+
+在简单线性回归中的`x`，对于复杂的机器学习项目，特征会有多个，表示为：
+$$
+\left\{ { x }_{ 1 },{ x }_{ 2 },{ x }_{ 3 },...{ x }_{ n } \right\}
+$$

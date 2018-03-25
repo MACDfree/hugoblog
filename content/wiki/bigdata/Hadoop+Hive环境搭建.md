@@ -8,16 +8,16 @@ tags: ["hadoop", "hive"]
 `Hadoop`+`Hive`环境搭建过程说明及注意事项
 <!--more-->
 
-### 安装包版本说明
+# 安装包版本说明
 
 安装包  | 版本
 ---    |---
 Hadoop | 2.8.1
 Hive   | 2.3.0
 
-### 安装Hadoop
+# 安装Hadoop
 
-#### 创建用户hadoop
+## 创建用户hadoop
 
 ``` sh
 # 创建hadoop用户
@@ -26,17 +26,18 @@ Shell> useradd -m hadoop -s /bin/bash
 Shell> passwd hadoop
 ```
 
-#### 修改hostname
+## 修改hostname
 
 ``` sh
 # 修改hostname
 Shell> vim /etc/hosts
 ```
+
 ![hosts](http://ocd8m6zlz.bkt.clouddn.com/clipboard.png)
 
 修改后重启，使用hadoop用户登录
 
-#### 设置免登录
+## 设置免登录
 
 ``` sh
 # 生成密钥对
@@ -49,14 +50,14 @@ Shell> chmod 644 authorized_keys
 Shell> tar -zxvf filename
 ```
 
-#### 添加环境变量
+## 添加环境变量
 
 ``` sh
 Shell> vim .bashrc
-```    
+```
 
 追加如下内容
-    
+
 ``` sh
 export JAVA_HOME=/usr/lib/jvm/java
 export HADOOP_HOME=/opt/hadoop
@@ -70,7 +71,7 @@ export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HIVE_HOME/bin
 Shell> source .bashrc
 ```
 
-#### 修改配置文件
+## 修改配置文件
 
 修改$HADOOP_HOME/etc/hadoop/core-site.xml
 
@@ -190,11 +191,11 @@ Shell> ./start-all.sh
 
 WebUI管理界面
 
-http://192.168.131.21:50070     HDFS管理界面
+`http://192.168.131.21:50070`     HDFS管理界面
 
-http://192.168.131.21:8088       MR管理界面
+`http://192.168.131.21:8088`       MR管理界面
 
-### 安装Hive
+# 安装Hive
 
 解压Hive到opt目录下
 
