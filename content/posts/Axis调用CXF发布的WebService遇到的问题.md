@@ -61,7 +61,7 @@ import javax.xml.bind.annotation.XmlType;
  * <p>
  * The following schema fragment specifies the expected content contained within
  * this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="ArrayOfString">
  *   &lt;complexContent>
@@ -89,7 +89,7 @@ public class ArrayOfString {
      * for the string property.
      * <p>
      * For example, to add a new item, do as follows:
-     * 
+     *
      * <pre>
      * getString().add(newItem);
      * </pre>
