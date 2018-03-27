@@ -11,32 +11,32 @@ tags: []
 
 # 初始化Git仓库
 
-``` sh
+``` bash
 git init
 ```
 
 # 跟踪所有改动文件
 
-``` sh
+``` bash
 git add .
 git add -i # 交互式添加跟踪文件
 ```
 
 # 停止跟踪文件但不删除
 
-``` sh
+``` bash
 git rm --cached <file>
 ```
 
 # 提交所有更新过的文件
 
-``` sh
+``` bash
 git commit -m 'commit message'
 ```
 
 # 删除未跟踪的所有文件
 
-``` sh
+``` bash
 git clean -f # 删除未跟踪的文件
 git clean -fd # 删除未跟踪的文件和文件夹
 # 使用git clean前先使用-n参数预览需要删除的文件，防止误删，如 git clean -nf
@@ -44,40 +44,40 @@ git clean -fd # 删除未跟踪的文件和文件夹
 
 # 撤销工作目录中所有未提交的修改
 
-``` sh
+``` bash
 git reset --hard HEAD
 ```
 
 # 全局设置
 
-``` sh
+``` bash
 git config --global user.name "macdfree"
 git config --global user.email "macdfree@163.com"
 ```
 
 # 切换Tag
 
-``` sh
+``` bash
 git checkout <tagname>
 ```
 
 # 创建并切换分支
 
-``` sh
+``` bash
 git checkout -b <branchname>
 ```
 
 相当于
 
-``` sh
+``` bash
 git branch <branchname>
 git checkout <branchname>
 ```
 
 # 推送分支至远程仓库
 
-``` sh
-git push origin <branchname>
+``` bash
+git pubash origin <branchname>
 ```
 
 # 合并远程仓库中的更改
@@ -88,21 +88,21 @@ git push origin <branchname>
 
 1. 添加用户A的项目地址
 
-``` sh
-git remote add upstream <URL>
-```
+    ``` bash
+    git remote add upstream <URL>
+    ```
 
 1. fetch用户A的项目
 
-``` sh
-git fetch upstream
-```
+    ``` bash
+    git fetch upstream
+    ```
 
 1. 将远程仓库合并到本地仓库
 
-``` sh
-git merge upstream/master
-```
+    ``` bash
+    git merge upstream/master
+    ```
 
     合并操作中可能会出现冲突无法合并，此时需要手动解决冲突后提交
 
