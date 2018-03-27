@@ -99,10 +99,10 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     gitmentJS = '<script src="https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js" crossorigin="anonymous"></script>'
     gitmentCSS = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css" crossorigin="anonymous">'
   [params.gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
-    owner = ""              # Your GitHub ID
-    repo = ""               # The repo to store comments
-    clientId = ""           # Your client ID
-    clientSecret = ""       # Your client secret
+    owner = "MACDfree"              # Your GitHub ID
+    repo = "gitment4"               # The repo to store comments
+    clientId = "3de7eda9fae832753b25"           # Your client ID
+    clientSecret = "fb1c82c44491295195db0eb7a2d12af22dfcae29"       # Your client secret
 
   [params.flowchartDiagrams]# see https://blog.olowolo.com/example-site/post/js-flowchart-diagrams/
     enable = false
