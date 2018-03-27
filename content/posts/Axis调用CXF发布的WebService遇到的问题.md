@@ -12,7 +12,7 @@ author: ""
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
 comment: true
-toc: true
+toc: false
 autoCollapseToc: false
 postMetaInFooter: true
 # You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
