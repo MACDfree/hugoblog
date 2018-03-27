@@ -1,7 +1,7 @@
 ---
 title: "Axis调用CXF发布的WebService遇到的问题"
 date: 2018-03-22T12:40:50+08:00
-lastmod: 2018-03-23T12:40:50+08:00
+lastmod: 2018-03-27T12:40:50+08:00
 draft: false
 keywords: ["axis", "cxf", "string[]", "WebService"]
 description: "Axis调用CXF发布的WebService遇到的问题"
@@ -44,7 +44,11 @@ mathjaxEnableSingleDollar: false
 
 使用客户提供的调用代码测试确实调用不成功，但**WebService**确实是按照客户提供的文档发布的，同时发现**WebService**端返回值类型为`String[]`，但调用方接收到的是`List`类型，所以导致了转换出错。由此怀疑是不是客户调用方法有问题，但沟通后反馈说其他系统对接过，没有问题，此时问题陷入了死胡同。
 
-面对这种问题，需要看透问题的本质，**WebService**的调用依靠的是**WSDL**描述调用属性，既然我们调用不成功，会不会是生成的**WSDL**有问题呢？按照这个思路，咨询客户获得了一份之前对接成功的系统的**WSDL**。经过比对，果然发现返回值类型并不是文档中写明的`String[]`，而是`ArrayOfString`，经过搜索，很快就找到了`ArrayOfString`的源码：
+面对这种问题，需要看透问题的本质，**WebService**的调用依靠的是**WSDL**描述调用属性，既然我们调用不成功，会不会是生成的**WSDL**有问题呢？按照这个思路，咨询客户获得了一份之前对接成功的系统的**WSDL**。经过比对，果然发现返回值类型并不是文档中写明的`String[]`，而是`ArrayOfString`，如下图所示：
+
+![成功调用的wsdl](http://ocd8m6zlz.bkt.clouddn.com/成功调用的wsdl.png)
+
+经过搜索，很快就找到了`ArrayOfString`的源码：
 
 ``` java
 import java.util.ArrayList;
