@@ -11,6 +11,6 @@ Maven常用命令记录
 
 使用指定参数打包
 
-``` sh
+``` bash
 mvn package -P dev
 ```
