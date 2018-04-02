@@ -77,7 +77,7 @@ git checkout <branchname>
 # 推送分支至远程仓库
 
 ``` bash
-git pubash origin <branchname>
+git push origin <branchname>
 ```
 
 # 合并远程仓库中的更改
@@ -107,3 +107,10 @@ git pubash origin <branchname>
     合并操作中可能会出现冲突无法合并，此时需要手动解决冲突后提交
 
 1. 推送本地仓库至用户B的远程仓库
+
+# 新增Tag并推送远程仓库
+
+``` bash
+git tag -a v1.1 -m "message"
+git push origin v1.1
+```
