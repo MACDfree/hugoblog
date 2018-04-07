@@ -99,4 +99,4 @@ mathjaxEnableSingleDollar: true
 
 均方误差（MSE）指的是每个样本的平均平方损失。计算公式为：
 
-{{< pure "MSE=\frac { 1 }{ N } \sum _{ (x,y)\in D }^{  }{ (y-prediction(x))^{ 2 } } " >}}
+{{< pure "$$MSE=\frac { 1 }{ N } \sum _{ (x,y)\in D }^{  }{ (y-prediction(x))^{ 2 } }$$" >}}
