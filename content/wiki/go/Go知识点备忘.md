@@ -25,7 +25,7 @@ var c int=100
 d:=100
 ```
 
-# slice类型和array类型变量初始化差异
+# slice类型和array类型变量初始化差异
 
 数组：[n]T
 
@@ -44,3 +44,13 @@ values := [9]int{} // array
 ``` go
 T(v)
 ```
+
+# 文件覆写
+
+``` go
+file, err := os.OpenFile(common.ConfigPath, os.O_WRONLY|os.O_TRUNC, 0600)
+defer file.Close()
+_, err = io.WriteString(file, str)
+```
+
+其中关键是`os.O_TRUNC`，查看注释表示：如果可能，在打开文件时清空文件。

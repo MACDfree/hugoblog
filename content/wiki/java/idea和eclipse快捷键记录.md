@@ -37,4 +37,4 @@ sequenceDiagrams:
 
 功能|IDEA(macos)|IDEA(windows)|Eclipse(macos)|Eclipse(windows)
 -----|--------|--------|-------|-------
-显示注释文档|ctl+j| | |鼠标移动到方法或类上
+显示注释文档|ctl+j|ctl+q| |鼠标移动到方法或类上
