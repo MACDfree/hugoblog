@@ -9,7 +9,7 @@ tags: ["bash"]
 Bash知识点记录
 <!--more-->
 
-### 使整条命令以sudo权限执行
+# 使整条命令以sudo权限执行
 
 ``` sh
 sudo sh -c "cat /dev/null > messages"
