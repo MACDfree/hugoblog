@@ -1,7 +1,7 @@
 ---
 title: "Linux常用命令"
 date: 2017-10-15T22:23:08+08:00
-lastmod: 2018-4-23T18:46:51+08:00
+lastmod: 2018-04-23T18:46:51+08:00
 draft: false
 categories: ["Linux"]
 tags: []
