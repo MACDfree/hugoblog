@@ -92,13 +92,13 @@ git push origin <branchname>
     git remote add upstream <URL>
     ```
 
-1. fetch用户A的项目
+2. fetch用户A的项目
 
     ``` bash
     git fetch upstream
     ```
 
-1. 将远程仓库合并到本地仓库
+3. 将远程仓库合并到本地仓库
 
     ``` bash
     git merge upstream/master
@@ -106,7 +106,7 @@ git push origin <branchname>
 
     合并操作中可能会出现冲突无法合并，此时需要手动解决冲突后提交
 
-1. 推送本地仓库至用户B的远程仓库
+4. 推送本地仓库至用户B的远程仓库
 
 # 新增Tag并推送远程仓库
 
