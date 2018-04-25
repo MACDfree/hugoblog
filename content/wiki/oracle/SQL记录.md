@@ -24,7 +24,7 @@ select * from v$version;
 
 # 查看表大小
 
-由于user_tables表中数据不是实时的，所有需要先执行
+由于user_tables表中数据不是实时的，所以需要先执行
 
 ``` sql
 select 'analyze table '||S.TABLE_NAME||' compute statistics;' from  user_tables s;
