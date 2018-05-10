@@ -6,15 +6,18 @@ categories: ["MySQL"]
 tags: []
 ---
 
-### Windows首次安装MySQL时初始化
+mysql安装记录
+
+<!--more-->
+
+# Windows首次安装MySQL时初始化
 
 ``` sh
 mysqld --initialize [with random root password]
 mysqld --initialize-insecure [without random root password]
 ```
-<!--more-->
 
-### linux安装mysql后密码重置
+# linux安装mysql后密码重置
 
 1. 修改/etc/my.cnf文件，添加skip-grant-tables=1配置，重启mysqld服务
 
@@ -38,7 +41,17 @@ mysqld --initialize-insecure [without random root password]
     update user set host='%' where user='root';
     ```
 
-### 补充
+# 补充
+
+mysql8.0.11安装包中没有my.ini默认配置文件，需要手动新增，并添加配置
+
+```ini
+basedir=D:/software/mysql-8.0.11-winx64
+datadir=D:/software/mysql-8.0.11-winx64/data
+default-storage-engine=INNODB
+# 默认启用ssl，本地部署可以关掉
+skip_ssl
+```
 
 mysql5.7为root用户随机生成了密码，一般存放在`/var/log/mysqld.log`中
 
@@ -53,7 +66,8 @@ grep "password" /var/log/mysqld.log
 使用此密码登录后需要通过以下语句修改密码
 
 ``` sql
-alter user 'root'@'localhost' identified by '11111';
+alter user 'root'@'localhost' identified with mysql_native_password by '11111';
+--alter user 'root'@'localhost' identified by '11111';
 ```
 
 查看mysql密码长度限制
