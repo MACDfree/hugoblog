@@ -141,7 +141,7 @@ sequenceDiagrams:
 
 如上图所示，填写需要的信息后即可新建用户。建议用户名统一和SVN账号相同，便于代码评审时SVN提交记录和用户对应。
 
-用户新建完成后需要赋予相应的权限。一种简便的方式是通过将用户添加入相应的用户组来进行授权。当新建项目时，默认会在改项目下创建`Code Viewers`、`Developers`和`Project Admins`三个用户组，分别对应此项目的`code-viewer`、`developer`和`project-admin`权限。实际操作中开发小组长同时加入`Code Viewers`、`Developers`和`Project Admins`三个用户组，其他成员加入`Code Viewers`和`Developers`用户组。
+用户新建完成后需要赋予相应的权限。一种简便的方式是通过将用户添加入相应的用户组来进行授权。当新建项目时，默认会在该项目下创建`Code Viewers`、`Developers`和`Project Admins`三个用户组，分别对应此项目的`code-viewer`、`developer`和`project-admin`权限。实际操作中开发小组长同时加入`Code Viewers`、`Developers`和`Project Admins`三个用户组，其他成员加入`Code Viewers`和`Developers`用户组。
 
 ![add to group](http://ocd8m6zlz.bkt.clouddn.com/addtogroup.png)
 
