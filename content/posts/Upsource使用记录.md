@@ -65,14 +65,14 @@ sequenceDiagrams:
   * 内存锁定和地址空间限制调整为无限制
   * 进程数调整为32768
 
-  具体配置为在`/etc/security/limits.conf`文件中添加如下配置：
+    具体配置为在`/etc/security/limits.conf`文件中添加如下配置：
 
-   ```conf
-   * - memlock unlimited
-   * - nofile 100000
-   * - nproc 32768
-   * - as unlimited
-   ```
+```conf
+* - memlock unlimited
+* - nofile 100000
+* - nproc 32768
+* - as unlimited
+```
 
 配置完成后，进入`<upsource_home>/bin`目录，执行`upsource.bat start`启动Upsource，执行`upsource.bat service install /runAsSystem`可以将Upsource注册为Windows服务，执行`upsource.bat stop`停止Upsource。
 
