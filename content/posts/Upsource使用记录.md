@@ -2,7 +2,7 @@
 title: "Upsource使用记录"
 date: 2018-05-12T12:39:45+08:00
 lastmod: 2018-05-12T12:39:45+08:00
-draft: true
+draft: false
 keywords: ["upsource"]
 description: "Upsource使用记录"
 tags: ["upsource"]
@@ -162,3 +162,14 @@ sequenceDiagrams:
 5. 针对每次提交都可以创建Code Review，或者加入已有的Code Review
 6. 展示与自己相关的消息，例如其他对你提交的代码添加了备注并at了你，此处就会展示此消息，并可进行回复
 
+![code review](http://ocd8m6zlz.bkt.clouddn.com/codereview.png)
+
+1. 修改`Code Review`名字，实际操作中一般设置为评审日期
+2. 对当前`Code Review`进行操作，依次为：
+   * `Accept`，接受当前Code Review，当与此次Code Review关联的修改都没有问题时点击此按钮
+   * `Raise concern`
+   * `Close review`，关闭当前Code Review，当和此次Code Review关联的修改点都修改完毕后可点击此按钮
+   * `Remove review`，删除此次review，一般是删除无用的Code Review
+3. 设置代码审查中的相关人员
+4. 与此次Code Review相关的代码修改
+5. 针对代码修改提出的备注
