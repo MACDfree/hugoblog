@@ -2,7 +2,7 @@
 title: "根证书生成及签发证书Java实现"
 date: 2018-05-17T14:02:39+08:00
 lastmod: 2018-05-17T14:02:39+08:00
-draft: true
+draft: false
 keywords: ["java", "bouncycastle", "生成证书"]
 description: "根证书生成及签发证书Java实现"
 tags: ["bouncycastle"]
