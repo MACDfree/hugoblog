@@ -60,7 +60,7 @@ Java中使用Keytool可以方便的实现证书的生成及存储。但实际项
 ```java
 KeyPairGenerator keyPairGen = KeyPairGenerator.getInstance("RSA");
 SecureRandom rand = SecureRandom.getInstance("SHA1PRNG");
-keyPairGen.initialize(2028, rand);
+keyPairGen.initialize(2048, rand);
 return keyPairGen.generateKeyPair();
 ```
 
@@ -164,7 +164,7 @@ return new JcaX509CertificateConverter().getCertificate(certHolder);
 
 ```java
 KeyStore keyStore = null;
-keyStore = KeyStore.getInstance(keyStoreType.getTypeName(), "BC");
+keyStore = KeyStore.getInstance("PKCS #12", "BC");
 keyStore.load(null, null);
 keyStore.setKeyEntry("aaa", keyPair.getPrivate(), new char[] {}, new Certificate[] { certificate, rootCertificate });
 FileOutputStream fos = new FileOutputStream(fKeyStoreFile)
