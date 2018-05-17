@@ -49,8 +49,6 @@ Java中使用Keytool可以方便的实现证书的生成及存储。但实际项
 3. 使用私钥进行对证书进行签名
 4. 将私钥和签过名的证书存储到文件中
 
-需要注意的是，如果是使用根证书签发证书，上述步骤二中的`Issuer Name`需要设置为根证书的`Subject Name`，步骤三中的私钥应该是根证书的私钥。
-
 下面来看一下具体实现
 
 ## 生成密钥对
@@ -160,6 +158,8 @@ X509CertificateHolder certHolder = certBuilder.build(signer);
 return new JcaX509CertificateConverter().getCertificate(certHolder);
 ```
 
+需要注意的是，如果是使用根证书签发证书，应该用根证书的私钥来进行签名。
+
 ## 将私钥和签过名的证书存储到文件中
 
 ```java
@@ -172,3 +172,5 @@ keyStore.store(fos, cPassword);
 fos.flush();
 fos.close();
 ```
+
+此处使用`PKCS #12`格式进行存储，包含私钥和证书链。
