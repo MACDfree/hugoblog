@@ -2,7 +2,7 @@
 title: "VPS初始化配置记录"
 date: 2018-07-12T23:33:33+08:00
 lastmod: 2018-07-12T23:33:33+08:00
-draft: true
+draft: false
 keywords: ["VPS"]
 description: "VPS初始化配置记录"
 tags: ["vps", "centos"]
@@ -62,7 +62,7 @@ vim /etc/shadowsocks.json
 ```json
 {
     "server":"ip",
-    "server_port":port,
+    "server_port":12345,
     "local_address":"127.0.0.1",
     "local_port":1080,
     "password":"password",
@@ -109,3 +109,15 @@ iptables -I INPUT 5 -p tcp --dport 8989 -j ACCEPT
 iptables -I INPUT 6 -p udp --dport 8989 -j ACCEPT
 service iptables save
 ```
+
+# 部署JetBrainsLicenseServer
+
+由于代码使用Go编写，所以首先需要安装Go环境。（有时间考虑编译好各平台的可执行文件，方便部署）
+
+```bash
+git clone https://gitee.com/MACDfree/JetBrainsLicenseServerforGo.git
+go build main.go
+nohup ./main -addr :1234 &
+```
+
+还需要将端口配置在iptables中
