@@ -35,6 +35,7 @@ scp  -r local_dir username@servername:remote_dir （上传文件夹至服务器�
 
 ``` bash
 date -s "2017-07-12 12:22:00"
+hwclock -w # 写入硬件时间
 ```
 
 # iptables

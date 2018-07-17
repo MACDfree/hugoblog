@@ -14,7 +14,7 @@ tags: ["figlet", "字符画"]
 解压缩
 
 ``` sh
-tar -zxvf 
+tar -zxvf
 ```
 
 安装GCC
