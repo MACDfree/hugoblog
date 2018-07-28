@@ -2,7 +2,7 @@
 title: "Jenkins整合sonarQube"
 date: 2018-07-28T17:14:20+08:00
 lastmod: 2018-07-28T17:14:20+08:00
-draft: true
+draft: false
 keywords: []
 description: "Jenkins整合SonarQube"
 tags: ["sonarqube", "jenkins"]
