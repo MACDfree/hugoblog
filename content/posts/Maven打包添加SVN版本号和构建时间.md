@@ -139,3 +139,5 @@ Maven官网上推荐的方式是使用`maven-antrun-plugin`插件实现（[链�
 至此，在jar包中添加SVN版本号和构建时间信息的功能已全部完成，效果如下：
 
 ![maven添加svn版本信息](http://ocd8m6zlz.bkt.clouddn.com/maven添加svn版本信息.png)
+
+**另外，上述pom.xml中的配置在eclipse中会报错，忽略即可。**
