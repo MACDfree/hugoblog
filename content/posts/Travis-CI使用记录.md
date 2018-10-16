@@ -69,7 +69,7 @@ notifications:
 
 下图是使用**Travis CI**构建Go项目的输出日志
 
-![travislog](http://ocd8m6zlz.bkt.clouddn.com/travislog.png)
+![travislog](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/travislog.png)
 
 由图可知，构建任务可分为：
 

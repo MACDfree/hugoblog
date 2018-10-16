@@ -59,7 +59,7 @@ mysql5.7为root用户随机生成了密码，一般存放在`/var/log/mysqld.log
 grep "password" /var/log/mysqld.log
 ```
 
-![查询随机密码](http://ocd8m6zlz.bkt.clouddn.com/查询随机密码.png)
+![查询随机密码](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/查询随机密码.png)
 
 可以使用此密码登录
 

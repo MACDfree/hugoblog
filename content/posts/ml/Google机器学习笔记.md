@@ -118,7 +118,7 @@ mathjaxEnableSingleDollar: true
 
 迭代方法过程如下图所示：
 
-![迭代方法](http://ocd8m6zlz.bkt.clouddn.com/迭代方法.png)
+![迭代方法](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/迭代方法.png)
 
 1. 首先为模型参数设置初始值，并代入特征值得到预测值{{< pure "${ y }^{ \prime  }$" >}}。
 1. 然后将样本标签和预测值代入损失函数计算损失，并依据此进行参数更新。
