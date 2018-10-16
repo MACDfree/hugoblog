@@ -48,7 +48,6 @@ iTerm相关配置记录备忘
 
     ![主题配置](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/主题配置.png)
 
-
 7. 设置指令高亮效果
 
     ``` sh
