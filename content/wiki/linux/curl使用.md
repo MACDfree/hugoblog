@@ -24,13 +24,7 @@ curl -O url
 断点续传
 
 ``` sh
-curl -O url
+curl -C - -O url
 ```
 
-下载过程中中断下载
-
-``` sh
-curl -C -O url
-```
-
-只用-C参数继续对该文件下载
+其中`-C -`表示让curl自动判断偏移位置进行断点续传下载
