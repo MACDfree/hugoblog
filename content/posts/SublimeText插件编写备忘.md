@@ -35,7 +35,7 @@ class ExampleCommand(sublime_plugin.TextCommand):
 
 默认生成的代码中继承了`TextCommand`，但其实还有`WindowCommand`和`ApplicationCommand`这两个基类。对于这三者的关系，我的理解是：`TextCommand`对应的是`sublime.View`，`WindowCommand`对应的是`sublime.Window`，`ApplicationCommand`对应的是`Sublime Module`；然后是一个Sublime程序会有多个Window，一个Window又会有多个View。
 
-![示意图](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/awv.jpg)
+![示意图](/images/awv.jpg)
 
 # 4. run_command常用的内置指令
 

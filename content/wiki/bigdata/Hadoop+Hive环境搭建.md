@@ -33,7 +33,7 @@ Shell> passwd hadoop
 Shell> vim /etc/hosts
 ```
 
-![hosts](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/clipboard.png)
+![hosts](/images/clipboard.png)
 
 修改后重启，使用hadoop用户登录
 

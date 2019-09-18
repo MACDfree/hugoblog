@@ -78,37 +78,37 @@ sequenceDiagrams:
 
 第一次启动Upsource时会自动打开默认浏览器跳转至欢迎界面
 
-![welcone](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/upsourcesetup.png)
+![welcone](/images/upsourcesetup.png)
 
 点击`Set up`进入设置页面
 
-![settings](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/upsourcesettings.png)
+![settings](/images/upsourcesettings.png)
 
 `Base URL`为Upsource访问地址，可以配置为IP+端口号的形式，如`http://192.168.108.68:8880`；`Application Listen Port`为监听端口，需要避免与其他应用冲突。
 
-![hugconfig](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/hubconfig.png)
+![hugconfig](/images/hubconfig.png)
 
 默认选择`Use Built-in Hub`，设置admin账号的密码。
 
-![license](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/license.png)
+![license](/images/license.png)
 
 默认选择免费授权，支持admin+guest+8users，点击finish完成设置。
 
-![starting](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/starting.png)
+![starting](/images/starting.png)
 
 等待一段时间配置完成后自动跳转首页
 
-![success](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/success.png)
+![success](/images/success.png)
 
 # 项目管理
 
 用admin账号登录Upsource，按下图操作进行项目新建
 
-![administration](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/admin.png)
+![administration](/images/admin.png)
 
-![createproject](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/createproject.png)
+![createproject](/images/createproject.png)
 
-![projectinfo](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/projectinfo.png)
+![projectinfo](/images/projectinfo.png)
 
 1. 项目名称
 2. 项目ID，默认与项目名称相同
@@ -135,21 +135,21 @@ sequenceDiagrams:
 
 目前为止，我们只有一个admin账号和一个不需要登录的guest账号。为了代码评审的正常进行需要为开发小组成员新增各自的账号并赋予相应的权限。
 
-![user](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/upsourceuser.png)
+![user](/images/upsourceuser.png)
 
-![new user](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/newuser.png)
+![new user](/images/newuser.png)
 
 如上图所示，填写需要的信息后即可新建用户。建议用户名统一和SVN账号相同，便于代码评审时SVN提交记录和用户对应。
 
 用户新建完成后需要赋予相应的权限。一种简便的方式是通过将用户添加入相应的用户组来进行授权。当新建项目时，默认会在该项目下创建`Code Viewers`、`Developers`和`Project Admins`三个用户组，分别对应此项目的`code-viewer`、`developer`和`project-admin`权限。实际操作中开发小组长同时加入`Code Viewers`、`Developers`和`Project Admins`三个用户组，其他成员加入`Code Viewers`和`Developers`用户组。
 
-![add to group](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/addtogroup.png)
+![add to group](/images/addtogroup.png)
 
 # 代码评审
 
-![project index](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/projectindex.png)
+![project index](/images/projectindex.png)
 
-![project home](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/projecthome.png)
+![project home](/images/projecthome.png)
 
 1. 快捷链接，从左到右依次为：
    * 代码浏览，列出工程结构，查看代码
@@ -162,7 +162,7 @@ sequenceDiagrams:
 5. 针对每次提交都可以创建Code Review，或者加入已有的Code Review
 6. 展示与自己相关的消息，例如其他对你提交的代码添加了备注并at了你，此处就会展示此消息，并可进行回复
 
-![code review](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/codereview.png)
+![code review](/images/codereview.png)
 
 1. 修改`Code Review`名字，实际操作中一般设置为评审日期
 2. 对当前`Code Review`进行操作，依次为：

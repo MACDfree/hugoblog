@@ -27,7 +27,7 @@ iTerm相关配置记录备忘
 
 4. 修改iTerm配置字体
 
-    ![字体配置](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/字体配置.png)
+    ![字体配置](/images/字体配置.png)
 
 5. 安装配置配色方案
 
@@ -37,7 +37,7 @@ iTerm相关配置记录备忘
 
     导入配置文件
 
-    ![导入配置文件](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/导入配置文件.png)
+    ![导入配置文件](/images/导入配置文件.png)
 
     import配置文件
 
@@ -46,7 +46,7 @@ iTerm相关配置记录备忘
     先检查一下`~/.oh-my-zsh/themes`目录下应该有此主题文件
     编辑`~/.zshrc`文件，将`ZSH_THEME`修改为`agnoster`
 
-    ![主题配置](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/主题配置.png)
+    ![主题配置](/images/主题配置.png)
 
 7. 设置指令高亮效果
 

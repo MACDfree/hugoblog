@@ -39,11 +39,11 @@ mathjaxEnableSingleDollar: false
 
 Lighthouse扩展程序安装完成后，打开需要检测的页面，点击右上角的插件图标再点击 “Generate report” 按钮开始进行检测。
 
-![Lighthouse插件](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/Lighthouse插件.png)
+![Lighthouse插件](/images/Lighthouse插件.png)
 
 检测完成后，插件会自动打开检测报告页面，如下图所示：
 
-![旧页面性能截图](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/旧页面性能截图.png)
+![旧页面性能截图](/images/旧页面性能截图.png)
 
 上图是测试系统登录页面的性能得分，可以看到，分数极低。下面就对照检测点，进行修改。
 
@@ -51,7 +51,7 @@ Lighthouse扩展程序安装完成后，打开需要检测的页面，点击右�
 
 ## Enable text compression
 
-![gzip压缩](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/gzip压缩.png)
+![gzip压缩](/images/gzip压缩.png)
 
 点开详细信息，可以看到测试系统没有使用gzip压缩。
 
@@ -88,19 +88,19 @@ gzip_vary on;
 
 ## Serve images in next-gen formats
 
-![图片过大](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/图片文件过大.png)
+![图片过大](/images/图片文件过大.png)
 
 检查点建议使用新的图片格式以提高压缩率，减小图片体积。针对此点，考虑到兼容性问题，本人并没有使用建议的图片格式，而是将png格式转成了jpg格式，从原来的 341 KB 缩小到 55.7 KB，虽然png是无损压缩，但对于登录页大背景图片来说jpg才是推荐的图片格式。
 
 ## Reduce render-blocking scripts & stylesheets
 
-![阻塞的js和css](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/阻塞的js和css.png)
+![阻塞的js和css](/images/阻塞的js和css.png)
 
 检测点中列出的js和css都是在`<head>`标签中，浏览器会等待这些css和js都加载完毕后再渲染页面，从而导致页面加载速度下降。本人采取的做法是将真正需要在页面渲染前加载的部分js和css使用`<script>`和`<style>`标签写在页面上，这样可以减少页面渲染前的资源加载。
 
 ## Unused CSS rules
 
-![无用的css](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/无用的css.png)
+![无用的css](/images/无用的css.png)
 
 这个检测点比较简单，需要注意的是列出的css并不是真的都是没有用到的，需要人工核查。
 

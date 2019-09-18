@@ -28,25 +28,25 @@ mathjaxEnableSingleDollar: false
 
 客户使用**Axis**调用我方使用**CXF**发布的**WebService**报错。报错信息为意外的元素，如下图所示
 
-![意外的参数类型](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/意外的参数类型.png)
+![意外的参数类型](/images/意外的参数类型.png)
 
 从报错信息看，WebService端需要的参考类型是`<{}arg0>`，而接收到的参数是`(uri:"http://tempuri.org/", local:"xmlParameter")`。经过搜索，发现需要在参数上添加注解，显式注明namespace和参数名：`@WebParam(name = "xmlParameter", targetNamespace = "http://tempuri.org/")`。修改完成后，本地测试依然报错，如下图所示
 
-![操作不匹配](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/操作不匹配.png)
+![操作不匹配](/images/操作不匹配.png)
 
 有了之前的经验，很快发现需要在方法上添加注解注明`action`：`@WebMethod(action = "http://tempuri.org/getAllPurchasePlane")`，同时，也针对返回值也添加了注解，注明返回值的`namespace`：`@WebResult(targetNamespace = "http://tempuri.org/")`。本地使用**Axis**测试调用成功，故更新至测试系统与客户联调，发现还是报错，但报错信息变为类型转换错误，如下图所示。
 
-![类型转换报错](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E6%8A%A5%E9%94%99.png)
+![类型转换报错](/images/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E6%8A%A5%E9%94%99.png)
 
 根据错误信息查找多次后仍未解决，此时，只好询问客户是否可以提供调用代码。获取调用代码后，发现确实调用代码有所不同，如下图所示。
 
-![调用代码](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/调用代码.png)
+![调用代码](/images/调用代码.png)
 
 使用客户提供的调用代码测试确实调用不成功，但**WebService**确实是按照客户提供的文档发布的，同时发现**WebService**端返回值类型为`String[]`，但调用方接收到的是`List`类型，所以导致了转换出错。由此怀疑是不是客户调用方法有问题，但沟通后反馈说其他系统对接过，没有问题，此时问题陷入了死胡同。
 
 面对这种问题，需要看透问题的本质，**WebService**的调用依靠的是**WSDL**描述调用属性，既然我们调用不成功，会不会是生成的**WSDL**有问题呢？按照这个思路，咨询客户获得了一份之前对接成功的系统的**WSDL**。经过比对，果然发现返回值类型并不是文档中写明的`String[]`，而是`ArrayOfString`，如下图所示：
 
-![成功调用的wsdl](https://blog-1254016481.cos.ap-shanghai.myqcloud.com/成功调用的wsdl.png)
+![成功调用的wsdl](/images/成功调用的wsdl.png)
 
 经过搜索，很快就找到了`ArrayOfString`的源码：
 
