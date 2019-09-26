@@ -1,10 +1,10 @@
 ---
-title: "{{ replace .TranslationBaseName "-" " " | title }}"
+title: "{{ replace .ContentBaseName "-" " " | title }}"
 date: {{ .Date }}
 lastmod: {{ .Date }}
-draft: true
+draft: false
 keywords: []
-description: "{{ replace .TranslationBaseName "-" " " | title }}"
+description: "{{ replace .ContentBaseName "-" " " | title }}"
 tags: []
 categories: []
 author: ""
