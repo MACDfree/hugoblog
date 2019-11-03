@@ -1,7 +1,7 @@
 baseURL = ""
 languageCode = "zh-CN"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
-title = "MACDeer's Blog"
+title = "MACDFree's Blog"
 enableRobotsTXT = true
 enableEmoji = true
 theme = "even"
@@ -49,7 +49,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   since = "2014"            # Site creation time          # 站点建立时间
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
-  logoTitle = "MACDeer's Blog"        # default: the title value    # 默认值: 上面设置的title值
+  logoTitle = "MACFree's Blog"        # default: the title value    # 默认值: 上面设置的title值
   keywords = ["blog", "macd","even"]
   description = "Hugo theme even example site."
 
