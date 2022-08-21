@@ -15,7 +15,7 @@ pygmentsUseClasses = true
 pygmentsCodefencesGuessSyntax = true
 
 hasCJKLanguage = true # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
-paginate = 5          # 首页每页显示的文章数
+paginate = 10          # 首页每页显示的文章数
 disqusShortname = ""  # disqus_shortname
 googleAnalytics = ""  # UA-XXXXXXXX-X
 copyright = ""        # default: author.name ↓        # 默认为下面配置的author.name ↓
@@ -77,7 +77,7 @@ dateFormatToUse = "2006-01-02"
 moreMeta = true
 
 # Syntax highlighting by highlight.js
-highlightInClient = true
+highlightInClient = false
 # 一些全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能，在 archetypes/default.md 查看更多信息。
 # Some global options, you can also close or open something in front matter for a single post, see more information from `archetypes/default.md`.
 toc = false              # 是否开启目录
@@ -158,11 +158,11 @@ avatar = 'mm'
 placeholder = '说点什么吧...'
 visitor = false
 [params.flowchartDiagrams] # see https://blog.olowolo.com/example-site/post/js-flowchart-diagrams/
-enable = false
+enable = true
 options = ""
 
 [params.sequenceDiagrams] # see https://blog.olowolo.com/example-site/post/js-sequence-diagrams/
-enable = false
+enable = true
 options = ""   # default: "{theme: 'simple'}"
 
 [params.busuanzi] # count web traffic by busuanzi                             # 是否使用不蒜子统计站点访问量
@@ -172,7 +172,7 @@ sitePV = true
 pagePV = true
 
 [params.reward] # 文章打赏
-enable = true
+enable = false
 wechat = "/img/reward/wechat-qr-code.png" # 微信二维码
 alipay = "/img/reward/alipay-qr-code.png" # 支付宝二维码
 
