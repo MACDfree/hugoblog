@@ -49,6 +49,11 @@ name = "归档"
 weight = 40
 identifier = "archives"
 url = "/post/"
+[[menu.main]]
+name = "工具集"
+weight = 50
+identifier = "tools"
+url = "https://tool.macdfree.cc"
 
 [params]
 version = "4.x"                  # Used to give a friendly message when you have an incompatible update
